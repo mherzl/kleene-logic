@@ -1,11 +1,11 @@
 module KleeneLogic where
 
-import Prelude (Eq)
+import Prelude (Eq, Ord)
 
 data Kleene = False
             | Unknown
             | True
-            deriving Eq
+            deriving (Eq, Ord)
 
 not :: Kleene -> Kleene
 not False = True
